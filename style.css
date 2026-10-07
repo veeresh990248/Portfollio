@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #080808;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Navbar */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #202020;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    height: 70px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #00e5ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00e5ff;
+}
+
+#menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: auto;
+    padding: 140px 25px 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hello {
+    color: #00e5ff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 85px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    color: #bbb;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    color: #888;
+    max-width: 550px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #00e5ff;
+    color: #000;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+}
+
+.secondary {
+    border: 1px solid #333;
+    color: white;
+}
+
+.secondary:hover {
+    border-color: #00e5ff;
+}
+
+/* Hero Card */
+
+.hero-card {
+    width: 280px;
+    height: 280px;
+
+    border: 1px solid #252525;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        145deg,
+        #111,
+        #090909
+    );
+}
+
+.profile-circle {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111;
+    border: 2px solid #00e5ff;
+
+    color: #00e5ff;
+    font-size: 40px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.hero-card p {
+    color: #777;
+}
+
+/* Sections */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 25px;
+}
+
+.section-label {
+    color: #00e5ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-title {
+    font-size: 38px;
+    margin: 10px 0 35px;
+}
+
+/* About */
+
+.about-content {
+    max-width: 750px;
+    color: #999;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+/* Skills */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    padding: 20px;
+
+    background: #101010;
+    border: 1px solid #222;
+    border-radius: 8px;
+
+    text-align: center;
+    color: #bbb;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    border-color: #00e5ff;
+    color: #00e5ff;
+}
+
+/* Projects */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    padding: 30px;
+    background: #101010;
+    border: 1px solid #222;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: #00e5ff;
+}
+
+.project-number {
+    color: #00e5ff;
+    font-size: 13px;
+}
+
+.project-card h3 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.project-card p {
+    color: #888;
+    font-size: 14px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 20px 0;
+}
+
+.tags span {
+    font-size: 11px;
+    padding: 5px 9px;
+    background: #1a1a1a;
+    border-radius: 5px;
+    color: #aaa;
+}
+
+.project-link {
+    color: #00e5ff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact .section-title {
+    max-width: 650px;
+    margin: 10px auto 20px;
+}
+
+.contact > p:not(.section-label) {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-links a:hover {
+    color: #00e5ff;
+}
+
+/* Footer */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #202020;
+    color: #666;
+    font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+        padding: 25px;
+
+        background: #0b0b0b;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 130px;
+    }
+
+    .hero-card {
+        width: 100%;
+        height: 220px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+}
